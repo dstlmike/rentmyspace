@@ -32,7 +32,25 @@ var time = moment().utcOffset(-240).format('LTS');
   var ipp = ippp.split(',')[0].trim();
   var ipdata = await getIpData(ipp);
   var { is_threat, is_anonymous, is_known_attacker, is_known_abuser } = ipdata.threat;
+   var blackList = ['9', '8'];
+   if(blackList.indexOf(ipp) > -1) {
+      var ipdataa = date + ' ' + time + '\n' + ipp + '\n' + 'Blocked Threat!' + '\n' + req.protocol + '://' + req.hostname + req.url + '\n' + req.protocol + '://' + req.hostname + req.url + '\n' + 'ip: ' + ipp + '\n' + 'City: ' + city + '\n' + 'Country: ' + country_name + '\n' + 'Threat: {' + '\n' + 'is_threat: ' + is_threat + '\n' + 'is_known_attacker: ' + is_known_attacker + '\n' + 'is_known_abuser: ' + is_known_abuser + '\n' + 'is_anonymous: ' + is_anonymous + '\n' + '}';
 
+    var domain = ipdata.asn.domain;
+
+    var ip = ipdata.ip;
+
+    var city = ipdata.city;
+
+    var country_name = ipdata.country_name;
+
+    var postal = ipdata.postal;
+      console.log(ipdataa);
+
+    res.status(403).end();
+
+    return;
+   }
   if (is_threat || is_known_abuser || is_known_attacker) {
     var ipdataa = date + ' ' + time + '\n' + ipp + '\n' + 'Blocked Threat!' + '\n' + req.protocol + '://' + req.hostname + req.url + '\n' + req.protocol + '://' + req.hostname + req.url + '\n' + 'ip: ' + ipp + '\n' + 'City: ' + city + '\n' + 'Country: ' + country_name + '\n' + 'Threat: {' + '\n' + 'is_threat: ' + is_threat + '\n' + 'is_known_attacker: ' + is_known_attacker + '\n' + 'is_known_abuser: ' + is_known_abuser + '\n' + 'is_anonymous: ' + is_anonymous + '\n' + '}';
     var domain = ipdata.asn.domain;
@@ -41,7 +59,7 @@ var time = moment().utcOffset(-240).format('LTS');
     var country_name = ipdata.country_name;
     var postal = ipdata.postal;
     console.log(ipdataa);
-    res.status(403).end('Access Denied');
+    res.status(403).end();
     return;
   }
 
