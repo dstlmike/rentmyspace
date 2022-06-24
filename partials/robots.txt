@@ -1,0 +1,17 @@
+User-agent: Googlebot
+Allow: /
+Allow: /home
+Allow: /bot
+Allow: /robots.txt
+Allow: /sitemap.xml
+Disallow: /nobot/*
+
+User-agent: *
+Allow: /
+Allow: /home
+Allow: /bot
+Allow: /robots.txt
+Allow: /sitemap.xml
+Disallow: /nobot/*
+
+Sitemap: https://marketbotai.com/sitemap.xml
