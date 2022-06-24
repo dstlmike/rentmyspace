@@ -14,7 +14,7 @@ var year = moment().utcOffset(-240).format('YYYY');
 var month = moment().utcOffset(-240).format('MM');
 var day = moment().utcOffset(-240).format('DD');
 var getIpData = require('../modules/ipdata.js');
-var getAllDocuments = require('../modules/dbfunctions.js')
+var getAllDocuments = require('../modules/dbfunctions.js');
 app.set('trust proxy', true);
 app.use(express.static('partials'));
 app.set('view engine', 'ejs');
