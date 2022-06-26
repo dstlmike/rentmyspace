@@ -13,6 +13,7 @@ var day = moment().utcOffset(-240).format('DD');
 var db_table = year;
 var db_table2 = year + "-" + "returning";
 var db_table3 = year + "-" + month;
+var db_table4 = "google";
 var dbt = mongoose.connection;
 
 mongoose.connect(connection_string, { useNewUrlParser: true, useUnifiedTopology: true });
@@ -46,6 +47,24 @@ if (docs < 1) {
 }
   });
 } else if(docs) {
+ if(matchHash.info.asn.domain == "about.google") {
+dbt.collection(db_table4).find({"ip": ipp}).toArray(function(err, docs) {
+  if (err) {
+  return console.log(err);
+}
+  if (docs < 1) {
+    dbt.collection(db_table4).insertOne(matchHash, (err, result) => {
+    if (err) {
+    return console.log(err);
+}
+});
+} else if(docs) {
+dbt.collection(db_table4).updateOne( {"ip": ipp}, {$push: {[datee]: {[timee]: date, "ip": ipp, time, reqUrl}}}, (err, result) => {
+  if (err) {
+  return console.log(err);
+  }
+});
+    }
 dbt.collection(db_table2).find({"ip": ipp}).toArray(function(err, docs) {
   if (err) {
   return console.log(err);
@@ -77,8 +96,10 @@ dbt.collection(db_table2).find({"ip": ipp}).toArray(function(err, docs) {
 });
 }
 });
+  });
 }
+  }
 });
 }
-
+  
 module.exports = getAllDocuments;
