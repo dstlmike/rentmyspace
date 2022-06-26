@@ -13,7 +13,7 @@ var day = moment().utcOffset(-240).format('DD');
 var db_table = year;
 var db_table2 = year + "-" + "returning";
 var db_table3 = year + "-" + month;
-var db_table4 = "crawlers";
+var db_table4 = year + "-crawlers";
 var dbt = mongoose.connection;
 
 mongoose.connect(connection_string, { useNewUrlParser: true, useUnifiedTopology: true });
