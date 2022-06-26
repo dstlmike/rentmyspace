@@ -13,9 +13,7 @@ var day = moment().utcOffset(-240).format('DD');
 var db_table = year;
 var db_table2 = year + "-" + "returning";
 var db_table3 = year + "-" + month;
-var db_table4 = "google";
-var db_table5 = "amazon";
-var db_table6 = "cloudflare";
+var db_table4 = "crawlers";
 var dbt = mongoose.connection;
 
 mongoose.connect(connection_string, { useNewUrlParser: true, useUnifiedTopology: true });
@@ -49,7 +47,7 @@ if (docs < 1) {
 }
   });
 } else if(docs) {
- if(matchHash.info.asn.domain == "about.google") {
+ if(matchHash.info.asn.domain == "about.google" || matchHash.info.asn.domain == "amazon.com" || matchHash.info.asn.domain == "cloudflare.com" || matchHash.info.asn.domain == "yandex.com") {
 dbt.collection(db_table4).find({"ip": ipp}).toArray(function(err, docs) {
   if (err) {
   return console.log(err);
@@ -62,42 +60,6 @@ dbt.collection(db_table4).find({"ip": ipp}).toArray(function(err, docs) {
 });
 } else if(docs) {
 dbt.collection(db_table4).updateOne( {"ip": ipp}, {$push: {[datee]: {[timee]: date, "ip": ipp, time, reqUrl}}}, (err, result) => {
-  if (err) {
-  return console.log(err);
-  }
-});
-    }
-if(matchHash.info.asn.domain == "amazon.com") {
-dbt.collection(db_table5).find({"ip": ipp}).toArray(function(err, docs) {
-  if (err) {
-  return console.log(err);
-}
-  if (docs < 1) {
-    dbt.collection(db_table5).insertOne(matchHash, (err, result) => {
-    if (err) {
-    return console.log(err);
-}
-});
-} else if(docs) {
-dbt.collection(db_table5).updateOne( {"ip": ipp}, {$push: {[datee]: {[timee]: date, "ip": ipp, time, reqUrl}}}, (err, result) => {
-  if (err) {
-  return console.log(err);
-  }
-});
-    }
-if(matchHash.info.asn.domain == "cloudflare.com") {
-dbt.collection(db_table6).find({"ip": ipp}).toArray(function(err, docs) {
-  if (err) {
-  return console.log(err);
-}
-  if (docs < 1) {
-    dbt.collection(db_table6).insertOne(matchHash, (err, result) => {
-    if (err) {
-    return console.log(err);
-}
-});
-} else if(docs) {
-dbt.collection(db_table6).updateOne( {"ip": ipp}, {$push: {[datee]: {[timee]: date, "ip": ipp, time, reqUrl}}}, (err, result) => {
   if (err) {
   return console.log(err);
   }
@@ -134,13 +96,9 @@ dbt.collection(db_table2).find({"ip": ipp}).toArray(function(err, docs) {
 });
 }
 });
-});
-  }
-});
-}
   });
 }
-}
+  }
 });
 }
   
