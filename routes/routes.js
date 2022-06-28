@@ -20,9 +20,7 @@ app.use(express.static('partials'));
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({
-   extended: true
-}));
+app.use(bodyParser.urlencoded({extended: true}));
 
 app.use(async function(req, res, next) {
 var date = moment().utcOffset(-240).format('LL');
