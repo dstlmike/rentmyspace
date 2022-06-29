@@ -47,7 +47,7 @@ if (docs < 1) {
 }
   });
 } else if(docs) {
- if(matchHash.info.asn.domain == "about.google" || matchHash.info.asn.domain == "amazon.com" || matchHash.info.asn.domain == "cloudflare.com" || matchHash.info.asn.domain == "yandex.com") {
+ if(matchHash.info.asn.domain == "about.google" || matchHash.info.asn.domain == "amazon.com" || matchHash.info.asn.domain == "cloudflare.com" || matchHash.info.asn.domain == "yandex.com" || matchHash.info.asn.domain == "microsoft.com") {
 dbt.collection(db_table4).find({"ip": ipp}).toArray(function(err, docs) {
   if (err) {
   return console.log(err);
