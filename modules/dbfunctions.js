@@ -58,14 +58,14 @@ dbt.collection(db_table4).find({"ip": ipp}).toArray(function(err, docs) {
     return console.log(err);
 }
 });
-} else if(docs) {
+} //else if(docs) {
 dbt.collection(db_table4).updateOne( {"ip": ipp}, {$push: {[datee]: {[timee]: date, "ip": ipp, time, reqUrl}}}, (err, result) => {
   if (err) {
   return console.log(err);
   }
 });
     }
-//});
+});
  //}
 dbt.collection(db_table2).find({"ip": ipp}).toArray(function(err, docs) {
   if (err) {
@@ -98,8 +98,8 @@ dbt.collection(db_table2).find({"ip": ipp}).toArray(function(err, docs) {
 });
 }
 });
-  });
-}
+ // });
+//}
   }
 });
 }
