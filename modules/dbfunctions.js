@@ -65,8 +65,8 @@ dbt.collection(db_table4).updateOne( {"ip": ipp}, {$push: {[datee]: {[timee]: da
   }
 });
     }
-});
- }
+//});
+ //}
 dbt.collection(db_table2).find({"ip": ipp}).toArray(function(err, docs) {
   if (err) {
   return console.log(err);
@@ -98,8 +98,8 @@ dbt.collection(db_table2).find({"ip": ipp}).toArray(function(err, docs) {
 });
 }
 });
- // });
-//}
+  }
+});
   }
 });
 }
