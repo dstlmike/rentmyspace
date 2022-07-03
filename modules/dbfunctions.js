@@ -98,8 +98,8 @@ dbt.collection(db_table2).find({"ip": ipp}).toArray(function(err, docs) {
 });
 }
 });
-  }
-});
+  });
+}
   }
 });
 }
