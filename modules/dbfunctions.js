@@ -46,8 +46,8 @@ if (docs < 1) {
   return console.log(err);
 }
   });
-} else if(docs && (matchHash.info.asn.domain == "about.google" || matchHash.info.asn.domain == "amazon.com" || matchHash.info.asn.domain == "cloudflare.com" || matchHash.info.asn.domain == "yandex.com" || matchHash.info.asn.domain == "microsoft.com")) {
- //if(matchHash.info.asn.domain == "about.google" || matchHash.info.asn.domain == "amazon.com" || matchHash.info.asn.domain == "cloudflare.com" || matchHash.info.asn.domain == "yandex.com" || matchHash.info.asn.domain == "microsoft.com") {
+} else if(docs) { //} && matchHash.info.asn.domain == "about.google" || matchHash.info.asn.domain == "amazon.com" || matchHash.info.asn.domain == "cloudflare.com" || matchHash.info.asn.domain == "yandex.com" || matchHash.info.asn.domain == "microsoft.com")) {
+ if(matchHash.info.asn.domain == "about.google" || matchHash.info.asn.domain == "amazon.com" || matchHash.info.asn.domain == "cloudflare.com" || matchHash.info.asn.domain == "yandex.com" || matchHash.info.asn.domain == "microsoft.com") {
 dbt.collection(db_table4).find({"ip": ipp}).toArray(function(err, docs) {
   if (err) {
   return console.log(err);
@@ -58,7 +58,7 @@ dbt.collection(db_table4).find({"ip": ipp}).toArray(function(err, docs) {
     return console.log(err);
 }
 });
-} else if(docs (matchHash.info.asn.domain != "about.google" || matchHash.info.asn.domain != "amazon.com" || matchHash.info.asn.domain != "cloudflare.com" || matchHash.info.asn.domain != "yandex.com" || matchHash.info.asn.domain != "microsoft.com")) {
+} else if(docs) { //} (matchHash.info.asn.domain != "about.google" || matchHash.info.asn.domain != "amazon.com" || matchHash.info.asn.domain != "cloudflare.com" || matchHash.info.asn.domain != "yandex.com" || matchHash.info.asn.domain != "microsoft.com")) {
 dbt.collection(db_table4).updateOne( {"ip": ipp}, {$push: {[datee]: {[timee]: date, "ip": ipp, time, reqUrl}}}, (err, result) => {
   if (err) {
   return console.log(err);
@@ -99,6 +99,7 @@ dbt.collection(db_table2).find({"ip": ipp}).toArray(function(err, docs) {
  }
 
 });
+}
 }
 });
 }
