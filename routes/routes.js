@@ -30,7 +30,7 @@ var time = moment().utcOffset(-240).format('LTS');
   var ipp = ippp.split(',')[0].trim();
   var ipdata = await getIpData(ipp);
   var { is_threat, is_anonymous, is_known_attacker, is_known_abuser } = ipdata.threat;
-   var blackList = ['46.161.27.204', '8'];
+   var blackList = ['46.161.27.204', '178.128.23.34', '5.134.122.60', '8'];
    if(blackList.indexOf(ipp) > -1) {
       var ipdataa = date + ' ' + time + '\n' + ipp + '\n' + 'Blocked Threat!' + '\n' + req.protocol + '://' + req.hostname + req.url + '\n' + req.protocol + '://' + req.hostname + req.url + '\n' + 'ip: ' + ipp + '\n' + 'City: ' + city + '\n' + 'Country: ' + country_name + '\n' + 'Threat: {' + '\n' + 'is_threat: ' + is_threat + '\n' + 'is_known_attacker: ' + is_known_attacker + '\n' + 'is_known_abuser: ' + is_known_abuser + '\n' + 'is_anonymous: ' + is_anonymous + '\n' + '}';
 
@@ -45,7 +45,7 @@ var time = moment().utcOffset(-240).format('LTS');
     var postal = ipdata.postal;
       console.log(ipdataa);
 
-    res.status(403).end();
+    res.status(403).end('You've found the secret page, tell me more so I can find this page too');
 
     return;
    }
