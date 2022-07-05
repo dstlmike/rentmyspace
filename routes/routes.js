@@ -45,7 +45,7 @@ var time = moment().utcOffset(-240).format('LTS');
     var postal = ipdata.postal;
       console.log(ipdataa);
 
-    res.status(403).end('You've found the secret page, tell me more so I can find this page too');
+    res.status(403).end('You found the secret page, tell me more so I can find this page too.');
 
     return;
    }
