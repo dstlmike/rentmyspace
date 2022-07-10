@@ -31,7 +31,7 @@ var time = moment().utcOffset(-240).format('LTS');
   var ipdata = await getIpData(ipp);
    var { name, domain } = ipdata.asn;
   var { is_threat, is_anonymous, is_known_attacker, is_known_abuser } = ipdata.threat;
-   var blackList = ['8'];
+  /* var blackList = ['8'];
    if(blackList.indexOf(ipp) > -1) {
        if (domain != 'about.google' || domain != 'yandex.com' || domain != 'microsoft.com' || domain != 'godaddy.com' || domain != 'amazon.com' || domain != 'amazon.ca') {
       var ipdataa = date + ' ' + time + '\n' + ipp + '\n' + 'Blocked Threat! \n Secret Page.' + '\n' + req.protocol + '://' + req.hostname + req.url + '\n' + req.protocol + '://' + req.hostname + req.url + '\n' + 'ip: ' + ipp + '\n' + 'City: ' + city + '\n' + 'Country: ' + country_name + '\n' + 'Threat: {' + '\n' + 'is_threat: ' + is_threat + '\n' + 'is_known_attacker: ' + is_known_attacker + '\n' + 'is_known_abuser: ' + is_known_abuser + '\n' + 'is_anonymous: ' + is_anonymous + '\n' + '}';
@@ -51,7 +51,7 @@ var time = moment().utcOffset(-240).format('LTS');
 
     return;
    }
-   }
+   }*/
    /*
   if (is_threat || is_known_abuser || is_known_attacker) {
     if (domain != 'about.google' || domain != 'yandex.com' || domain != 'microsoft.com' || domain != 'godaddy.com' || domain != 'amazon.com' || domain != 'amazon.ca') {
