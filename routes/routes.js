@@ -82,7 +82,7 @@ var time = moment().utcOffset(-240).format('LTS');
   if (process.env.NODE_ENV != 'development') {
   if (!req.secure) { //|| req.headers.host != 'marketbotai.com') {
   return res.status(301).redirect('https://marketbotai.com');
-  //}
+  }
 }
   next();
   });
