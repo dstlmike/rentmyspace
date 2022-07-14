@@ -9,10 +9,10 @@
 <link rel="preload" as="script" href="https://www.clarity.ms/eus2-d/s/0.6.35/clarity.js" />
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-199797979-2"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-199797979-2" defer></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  async function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
 gtag('set', 'allow_google_signals', false);
