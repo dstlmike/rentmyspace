@@ -15,6 +15,8 @@ var month = moment().utcOffset(-240).format('MM');
 var day = moment().utcOffset(-240).format('DD');
 var getIpData = require('../modules/ipdata.js');
 var getAllDocuments = require('../modules/dbfunctions.js');
+var GMAIL_USER = process.env.GMAIL_USER;
+var GMAIL_PASSWORD = process.env.GMAIL_PASSWORD;
 app.set('trust proxy', true);
 app.use(express.static('partials'));
 app.set('view engine', 'ejs');
@@ -296,3 +298,4 @@ var logg = date + ' ' + time + '\n' + ipp + '\n' + req.protocol + '://' + req.ho
 });
 
 module.exports = app;
+
