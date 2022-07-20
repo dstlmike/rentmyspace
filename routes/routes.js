@@ -195,7 +195,7 @@ var logg = date + ' ' + time + '\n' + ipp + '\n' + req.protocol + '://' + req.ho
   res.render('unsubscribe.ejs');
 });
 
-app.post('/unsubscribe', function(req, res) {
+app.post('/unsubscribe', async function(req, res, next) {
 var date = moment().utcOffset(-240).format('LL');
 var time = moment().utcOffset(-240).format('LTS');
 
