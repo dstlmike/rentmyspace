@@ -14,9 +14,9 @@ var utterances = [
   ["what are you doing", "what is going on", "what is up"],      //2
   ["how old are you"],					//3
   ["who are you", "are you human", "are you bot", "are you human or bot"],   //4
-
-
-
+  ["how do you top up my bot", "how to top up marketbot", "top-up", "topup", "top up"],
+  ["withdrawals", "withdrawal"],
+  ["help"],
 ];
 
 // Possible responses corresponding to triggers
@@ -38,6 +38,9 @@ var answers = [
   ],						//2
   ["I am infinite"],					//3
   ["I am just a bot", "I am a bot. What are you?"],	//4
+  ["Visit our /home page and check out the Fund MarketBot dropdown menu."],
+  ["Withdrawals have been paused as they update their website.", "Withdrawals have been paused, check back later for more info", "Please allow some time for withdrawals to open up again"],
+  ["Have you checked your earnings today? Sign in to see how MarketBot is working for you.", "Try saying top up", "Say something like withdrawals", "say something like register", "Have questions, send us an e-mail at info@marketbotai.com", "Want to learn more? click sign in/sign up for more info", "Need help? Our support team is here to assist, e-mail us at info@marketbotai.com"],
 
 
 
@@ -46,9 +49,9 @@ var answers = [
 // For any other user input
 
 var alternatives = [
-  "Go on...",
-  "Try again",
-  "Have questions about the MarketBot project?\nVisit https://marketbotai.com/contact-us or send us an email at\ninfo@marketbotai.com",
+  "Have questions about the MarketBot project? Send us an email at info@marketbotai.com",
+  "Type help for more options",
+  "I don't understand, try again.."
 ];
 
 var inputField = document.getElementById("input");
@@ -132,5 +135,7 @@ function addChatEntry(input, product) {
   setTimeout(() => {
    
     botText.innerText = `${product}`;
+messagesContainer.scrollTop = messagesContainer.scrollHeight - messagesContainer.clientHeight;
+
   }, 2000);
 }
