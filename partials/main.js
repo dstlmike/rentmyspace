@@ -17,7 +17,7 @@ var utterances = [
   ["how do you top up my bot", "how to top up marketbot", "top-up", "topup", "top up"],
   ["withdrawals", "withdrawal"],
 ["register"],
-["agent", "live agent", "speak to a representative"],
+["agent", "live agent", "speak to an agent", "speak to a live agent", "representative", "live representative", "speak to a representative"],
   ["help"],
 ];
 
