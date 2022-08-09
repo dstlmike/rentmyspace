@@ -56,7 +56,7 @@ var alternatives = [
   "Type help for more options",
   "I don't understand, try again.."
 */
-"Have you checked your earnings today? Sign in to see how MarketBot is working for you.", "Try saying top up", "Say something like withdrawals", "say something like register", "Have questions, send us an e-mail at info@marketbotai.com", "Want to learn more? click sign in/sign up for more info", "Need help? Our support team is here to assist, e-mail us at info@marketbotai.com"
+"Have you checked your earnings today? Sign in to see how MarketBot is working for you.", "Try saying 'top up'", "Say something like 'withdrawal'", "say something like 'register'", "Have questions, send us an e-mail at info@marketbotai.com", "Want to learn more? click sign in/sign up for more info", "Need help? Our support team is here to assist, e-mail us at info@marketbotai.com"
 ];
 
 var inputField = document.getElementById("input");
