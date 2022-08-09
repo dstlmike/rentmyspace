@@ -27,9 +27,12 @@ var answers = [
     "Fine... Thanks for asking.",
     "Pretty well, how can I help you?",
     "Fantastic, how can I assist?"
+
   ],                                                                                  	//0
   [
-    "Hello!", "Hi!", "Hey!", "Hi there!", "Howdy!"
+   /* "Hello!", "Hi!", "Hey!", "Hi there!", "Howdy!" */
+"Hi, I'm your AI assistant. How can I help you?"
+
   ],						//1
   [
     "Nothing much",
