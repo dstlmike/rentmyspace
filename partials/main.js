@@ -24,25 +24,25 @@ var utterances = [
 
 var answers = [
    [
-    "Fine... how are you?",
-    "Pretty well, how are you?",
-    "Fantastic, how are you?"
+    "Fine... how can I help you?",
+    "Pretty well, how can I assist?",
+    "Fantastic, thanks for asking?"
   ],                                                                                  	//0
   [
-    "Hello!", "Hi!", "Hey!", "Hi there!", "Howdy"
+    "Hello!", "Hi!", "Hey!", "Hi there!", "Howdy."
   ],						//1
   [
-    "Nothing much",
-    "About to go to sleep",
+    "Nothing much.",
+    "About to go to sleep.",
     "Can you guess?",
-    "I don't know actually"
+    "I don't know actually."
   ],						//2
   ["I am infinite"],					//3
   ["I am just a bot", "I am a bot. What are you?"],	//4
   ["Visit our /home page and check out the Fund MarketBot dropdown menu."],
-  ["Withdrawals have been paused as they update their website.", "Withdrawals have been paused, check back later for more info", "Please allow some time for withdrawals to open up again"],
-  ["Click Sign in|Sign up to register"],
-["Have you checked your earnings today? Sign in to see how MarketBot is working for you.", "Try saying top up", "Say something like withdrawals", "say something like register", "Have questions, send us an e-mail at info@marketbotai.com", "Want to learn more? click sign in/sign up for more info", "Need help? Our support team is here to assist, e-mail us at info@marketbotai.com"],
+  ["Withdrawals have been paused as they update their website.", "Withdrawals have been paused, check back later for more info.", "Please allow some time for withdrawals to open up again."],
+  ["Click on GET USD50 ADS BUDGET to register."],
+["Have you checked your earnings today? Sign in to see how MarketBot is working for you.", "Try saying top up.", "Say something like withdrawals.", "You can try something like register.", "Have questions, send us an e-mail at info@marketbotai.com.", "Want to learn more? click sign in/sign up for more info.", "Need help? Our support team is here to assist, e-mail us at info@marketbotai.com."],
 
 
 
@@ -53,10 +53,10 @@ var answers = [
 var alternatives = [
 /*
   "Have questions about the MarketBot project? Send us an email at info@marketbotai.com",
-  "Type help for more options",
+  "Type help for more options.",
   "I don't understand, try again.."
 */
-"Have you checked your earnings today? Sign in to see how MarketBot is working for you.", "Try saying top up", "Say something like withdrawals", "say something like register", "Have questions, send us an e-mail at info@marketbotai.com", "Want to learn more? click sign in/sign up for more info", "Need help? Our support team is here to assist, e-mail us at info@marketbotai.com"
+"Have you checked your earnings today? Sign in to see how MarketBot is working for you.", "Try saying top up.", "Say something like withdrawals.", "Try something like register.", "Have questions, send us an e-mail at info@marketbotai.com.", "Want to learn more? click sign in/sign up for more info.", "Need help? Our support team is here to assist, e-mail us at info@marketbotai.com."
 ];
 
 var inputField = document.getElementById("input");
