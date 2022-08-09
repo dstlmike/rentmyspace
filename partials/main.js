@@ -17,6 +17,7 @@ var utterances = [
   ["how do you top up my bot", "how to top up marketbot", "top-up", "topup", "top up"],
   ["withdrawals", "withdrawal"],
 ["register"],
+["agent", "live agent", "speak to a representative"],
   ["help"],
 ];
 
@@ -42,6 +43,8 @@ var answers = [
   ["Visit our /home page and check out the Fund MarketBot dropdown menu."],
   ["Withdrawals have been paused as they update their website.", "Withdrawals have been paused, check back later for more info.", "Please allow some time for withdrawals to open up again."],
   ["Click on GET USD50 ADS BUDGET to register."],
+["Send us an e-mail at info@marketbotai.com and one of our representatives will assist you further."],
+
 ["Have you checked your earnings today? Sign in to see how MarketBot is working for you.", "Try saying top up.", "Say something like withdrawals.", "You can try something like register.", "Have questions, send us an e-mail at info@marketbotai.com.", "Want to learn more? click sign in/sign up for more info.", "Need help? Our support team is here to assist, e-mail us at info@marketbotai.com."],
 
 
