@@ -24,12 +24,12 @@ var utterances = [
 
 var answers = [
    [
-    "Fine... how are you?",
-    "Pretty well, how are you?",
-    "Fantastic, how are you?"
+    "Fine... Thanks for asking.",
+    "Pretty well, how can I help you?",
+    "Fantastic, how can I assist?"
   ],                                                                                  	//0
   [
-    "Hello!", "Hi!", "Hey!", "Hi there!", "Howdy"
+    "Hello!", "Hi!", "Hey!", "Hi there!", "Howdy!"
   ],						//1
   [
     "Nothing much",
@@ -42,7 +42,7 @@ var answers = [
   ["Visit our /home page and check out the Fund MarketBot dropdown menu."],
   ["Withdrawals have been paused as they update their website.", "Withdrawals have been paused, check back later for more info", "Please allow some time for withdrawals to open up again"],
   ["Click Sign in|Sign up to register"],
-["Have you checked your earnings today? Sign in to see how MarketBot is working for you.", "Try saying top up", "Say something like withdrawals", "say something like register", "Have questions, send us an e-mail at info@marketbotai.com", "Want to learn more? click sign in/sign up for more info", "Need help? Our support team is here to assist, e-mail us at info@marketbotai.com"],
+["Have you checked your earnings today? Sign in to see how MarketBot is working for you.", "Try saying 'top up'", "Say something like 'withdrawal'", "You can try saying things like 'register'", "Have questions, send us an e-mail at info@marketbotai.com", "Want to learn more? click sign in/sign up for more info", "Need help? Our support team is here to assist, e-mail us at info@marketbotai.com"],
 
 
 
