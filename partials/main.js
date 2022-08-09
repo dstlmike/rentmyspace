@@ -1,11 +1,11 @@
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelector("#input").addEventListener("keypress", function(event) {
+    if (event.code === "Enter") {
 
-   document.addEventListener("DOMContentLoaded", () => {
-  document.querySelector("#input").addEventListener("keydown", function(e) {
-    if (e.code === "Enter") {
-        
     }
   });
 });
+
 
 
 var utterances = [
@@ -16,6 +16,7 @@ var utterances = [
   ["who are you", "are you human", "are you bot", "are you human or bot"],   //4
   ["how do you top up my bot", "how to top up marketbot", "top-up", "topup", "top up"],
   ["withdrawals", "withdrawal"],
+["register"],
   ["help"],
 ];
 
@@ -40,7 +41,8 @@ var answers = [
   ["I am just a bot", "I am a bot. What are you?"],	//4
   ["Visit our /home page and check out the Fund MarketBot dropdown menu."],
   ["Withdrawals have been paused as they update their website.", "Withdrawals have been paused, check back later for more info", "Please allow some time for withdrawals to open up again"],
-  ["Have you checked your earnings today? Sign in to see how MarketBot is working for you.", "Try saying top up", "Say something like withdrawals", "say something like register", "Have questions, send us an e-mail at info@marketbotai.com", "Want to learn more? click sign in/sign up for more info", "Need help? Our support team is here to assist, e-mail us at info@marketbotai.com"],
+  ["Click Sign in|Sign up to register"],
+["Have you checked your earnings today? Sign in to see how MarketBot is working for you.", "Try saying top up", "Say something like withdrawals", "say something like register", "Have questions, send us an e-mail at info@marketbotai.com", "Want to learn more? click sign in/sign up for more info", "Need help? Our support team is here to assist, e-mail us at info@marketbotai.com"],
 
 
 
@@ -49,29 +51,37 @@ var answers = [
 // For any other user input
 
 var alternatives = [
+/*
   "Have questions about the MarketBot project? Send us an email at info@marketbotai.com",
   "Type help for more options",
   "I don't understand, try again.."
+*/
+"Have you checked your earnings today? Sign in to see how MarketBot is working for you.", "Try saying top up", "Say something like withdrawals", "say something like register", "Have questions, send us an e-mail at info@marketbotai.com", "Want to learn more? click sign in/sign up for more info", "Need help? Our support team is here to assist, e-mail us at info@marketbotai.com"
 ];
 
 var inputField = document.getElementById("input");
-var buttonField; //document.getElementById("myButton");
+//var buttonField = document.getElementById("submitBtn"); //.addEventListener("click", function(event) { output(input); };
+
 // Execute a function when the user presses a key on the keyboard
 inputField.addEventListener("keypress", function(event) {
-  
+
   // If the user presses the "Enter" key on the keyboard
-  if (event.key === "Enter" && inputField.value) { // && input !== "Write something...") {
-    //buttonField = 
+  if (event.key === "Enter" && inputField.value) { // || (buttonField.value == "submit" && inputField.value)) { // && input !== "Write something...") {
+    //buttonField =
      let input = inputField.value;
 
     inputField.value = "";
-    output(input);
+
+     output(input);
     // Cancel the default action, if needed
     event.preventDefault();
    // Trigger the button element with a click
-   // document.getElementById("myButton").click();
+  
+
+ 
+  
 }
-      
+
 });
 function output(input) {
   let product;
@@ -114,28 +124,40 @@ function compare(utterancesArray, answersArray, string) {
 }
 
 function addChatEntry(input, product) {
+   
+   
+
+
   var messagesContainer = document.getElementById("messages");
   let userDiv = document.createElement("div");
   userDiv.id = "user";
   userDiv.className = "user response";
   userDiv.innerHTML = `<span>${input}</span>`;
+  
   messagesContainer.appendChild(userDiv);
+  messagesContainer.scrollTop = messagesContainer.scrollHeight - messagesContainer.clientHeight; 
 
+  setTimeout(() => {
+ 
   let botDiv = document.createElement("div");
   let botText = document.createElement("span");
   botDiv.id = "bot";
   botDiv.className = "bot response";
+ 
   botText.innerText = "Typing...";
+  
   botDiv.appendChild(botText);
   messagesContainer.appendChild(botDiv);
+ 
+  
 
   messagesContainer.scrollTop =
     messagesContainer.scrollHeight - messagesContainer.clientHeight;
-
+  
   setTimeout(() => {
-   
     botText.innerText = `${product}`;
 messagesContainer.scrollTop = messagesContainer.scrollHeight - messagesContainer.clientHeight;
 
-  }, 2000);
+  }, 10000);
+       }, 5000);
 }
