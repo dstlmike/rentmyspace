@@ -31,7 +31,7 @@ var answers = [
   ],                                                                                  	//0
   [
    /* "Hello!", "Hi!", "Hey!", "Hi there!", "Howdy!" */
-"Hi there, I'm MarketBotai.com's AI assistant. How can I help you?"
+"Hi there, I'm your AI assistant. How can I help you?"
 
   ],						//1
   [
