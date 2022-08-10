@@ -10,10 +10,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 var utterances = [
   ["how are you", "how is life", "how are things"],        //0
-  ["hi", "hey", "hello", "good morning", "good afternoon"],      //1
+  ["hi", "hey", "hello", "good morning", "good afternoon", "hi there"],      //1
   ["what are you doing", "what is going on", "what is up"],      //2
   ["how old are you"],					//3
-  ["who are you", "are you human", "are you bot", "are you human or bot"],   //4
+  ["who are you", "are you human", "are you bot", "are you human or bot", "are you a robot"],   //4
   ["how do you top up my bot", "how to top up marketbot", "top-up", "topup", "top up"],
   ["withdrawals", "withdrawal"],
 ["register"],
@@ -31,21 +31,21 @@ var answers = [
   ],                                                                                  	//0
   [
    /* "Hello!", "Hi!", "Hey!", "Hi there!", "Howdy!" */
-"Hi, I'm your AI assistant. How can I help you?"
+"Hi there, I'm MarketBotai.com's AI assistant. How can I help you?"
 
   ],						//1
   [
-    "Nothing much",
-    "About to go to sleep",
+    "Nothing much.",
+    "About to go to sleep.",
     "Can you guess?",
-    "I don't know actually"
+    "I don't know actually."
   ],						//2
-  ["I am infinite"],					//3
-  ["I am just a bot", "I am a bot. What are you?"],	//4
+  ["I am infinite."],					//3
+  ["I am just a bot.", "I am a bot. What are you?"],	//4
   ["Visit our /home page and check out the Fund MarketBot dropdown menu."],
-  ["Withdrawals have been paused as they update their website.", "Withdrawals have been paused, check back later for more info", "Please allow some time for withdrawals to open up again"],
+  ["Withdrawals have been paused as they update their website.", "Withdrawals have been paused, check back later for more info.", "Please allow some time for withdrawals to open up again."],
   ["Click Sign in|Sign up to register"],
-["Have you checked your earnings today? Sign in to see how MarketBot is working for you.", "Try saying 'top up'", "Say something like 'withdrawal'", "You can try saying things like 'register'", "Have questions, send us an e-mail at info@marketbotai.com", "Want to learn more? click sign in/sign up for more info", "Need help? Our support team is here to assist, e-mail us at info@marketbotai.com"],
+["Have you checked your earnings today? Sign in to see how MarketBot is working for you.", "Try saying 'top up'.", "Say something like 'withdrawal'.", "You can try saying things like 'register'.", "Have questions, send us an e-mail at info@marketbotai.com.", "Want to learn more? click sign in/sign up for more info.", "Need help? Our support team is here to assist, e-mail us at info@marketbotai.com."],
 
 
 
