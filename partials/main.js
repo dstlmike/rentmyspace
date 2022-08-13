@@ -193,7 +193,7 @@ messagesContainer.scrollTop = messagesContainer.scrollHeight - messagesContainer
 setTimeout(() => { 
 botText.innerText = `\u0041\u0067\u0065\u006E\u0074\u003A\u000DHi there, I'm your AI assistant. How can I help you?\u000D\u000D`;
 messagesContainer.scrollTop = messagesContainer.scrollHeight - messagesContainer.clientHeight;
-}, 2000); 
-}, 5000);
+}, 5000); 
+}, 2000);
 }
 
