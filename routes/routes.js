@@ -262,7 +262,7 @@ var logg = date + ' ' + time + '\n' + ipp + '\n' + req.protocol + '://' + req.ho
 
 
 
-app.get('/contact-us', async function(req, res, next) {
+app.get('/support, async function(req, res, next) {
 var date = moment().utcOffset(-240).format('LL');
 var time = moment().utcOffset(-240).format('LTS');
 
@@ -280,7 +280,7 @@ var logg = date + ' ' + time + '\n' + ipp + '\n' + req.protocol + '://' + req.ho
   res.render('contact.ejs');
 });
 
-app.post('/contact-us', async function(req, res, next) {
+app.post('/support', async function(req, res, next) {
 var date = moment().utcOffset(-240).format('LL');
 var time = moment().utcOffset(-240).format('LTS');
 
