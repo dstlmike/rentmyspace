@@ -44,7 +44,7 @@ var answers = [
   ["I am just a bot.", "I am a bot. What are you?"],	//4
   ["Visit our /home page and check out the Fund MarketBot dropdown menu."],
   ["Withdrawals have been paused as they update their website.", "Withdrawals have been paused, check back later for more info.", "Please allow some time for withdrawals to open up again."],
-  ["Click Sign in|Sign up to register"],
+  ["Click GET USD50 ADS BUDGET to register"],
 ["Have you checked your earnings today? Sign in to see how MarketBot is working for you.", "Try saying 'top up'.", "Say something like 'withdrawal'.", "You can try saying things like 'register'.", "Have questions, send us an e-mail at info@marketbotai.com.", "Want to learn more? click sign in/sign up for more info.", "Need help? Our support team is here to assist, e-mail us at info@marketbotai.com."],
 
 
