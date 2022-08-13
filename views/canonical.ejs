@@ -372,6 +372,9 @@ margin-top: 15px;
 .form-container .cancel {
   background-color: red;
 }
+.form-container .contact {
+  background-color: blue;
+}
 
 .form-container .btn:hover, .open-button:hover {
   opacity: 1;
@@ -412,8 +415,10 @@ margin-top: 15px;
 
     <!--<textarea placeholder="Type message.." name="msg" required></textarea>-->
 
-    <!-- <button type="submit" class="btn">Send</button> -->
-    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    <!-- <button type="submit" class="btn">Send</button> --><input type="button" class="btn cancel" value="Close" onclick="closeForm()">
+<input type="button" class="btn contact" value="Contact Us" onclick="window.location.href='/contact-us'">
+
+    <input type="button" class="btn cancel" value="Close" onclick="closeForm()">
   </form>
 </div>
 
