@@ -272,40 +272,41 @@ span {
   	height: 100%;
   	width: 90%;
   	background-color: white;
-color: black;
   	margin: 10px;
   	border-radius: 10px;
   }
 
   #bot {
   	margin-right: auto;
-font-weight: bolder;
+
   }
 
   #user {
   	margin-right: auto;
-font-weight: bolder;
+
   }
 
   .user {
   	font-family: Consolas, 'Courier New', Menlo, source-code-pro, Monaco,
   	monospace;
-
+font-weight: bolder;
+color: black;
   }
 
   .bot {
   	font-family: Consolas, 'Courier New', Menlo, source-code-pro, Monaco,
   	monospace;
-
+font-weight: bolder;
+color: black;
   }
 
-#user::first-line {
+.user::first-line {
   	
 font-weight: bolder;
 color: #00008B !important;
   }
 
-  #bot::first-line {
+  .bot::first-line {
 font-weight: bolder;
 color: #006400 !important;
   }
@@ -409,7 +410,7 @@ margin-top: 15px;
   <form class="form-container">
     <h1 style="color: black !important;">Chat</h1>
 
-    <label for="msg"><b>Messages</b></label>
+    <label for="msg" style="color: black !important;"><b>Messages</b></label>
     <div id="container" class="container">
    <div id="chat" class="chat">
     <div id="messages" class="messages"></div>
