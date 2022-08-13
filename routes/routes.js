@@ -262,7 +262,7 @@ var logg = date + ' ' + time + '\n' + ipp + '\n' + req.protocol + '://' + req.ho
 
 
 
-app.get('/support, async function(req, res, next) {
+app.get('/support', async function(req, res, next) {
 var date = moment().utcOffset(-240).format('LL');
 var time = moment().utcOffset(-240).format('LTS');
 
