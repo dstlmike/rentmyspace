@@ -44,7 +44,7 @@ var alternatives = [
 
 var inputField = document.getElementById("input");
 var inputt = document.querySelector("#input");
-var inputt.disabled = "false";
+inputt.enabled = true;
 //addChatEntryBot();
 inputField.addEventListener("keypress", function(event) {
 let input = inputField.value;
