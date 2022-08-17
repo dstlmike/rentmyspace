@@ -44,11 +44,11 @@ var alternatives = [
 
 var inputField = document.getElementById("input");
 var inputt = document.querySelector("#input");
-//inputt.disabled = false;
+inputt.disabled = false;
 //addChatEntryBot();
 inputField.addEventListener("keypress", function(event) {
 let input = inputField.value;
-     if (event.key === "Enter" && inputField.value) {
+     if (event.key === "Enter" && inputField.value && !input.disabled) {
     inputField.value = "";
     output(input);
  stateHandle();
