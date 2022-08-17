@@ -44,11 +44,11 @@ var alternatives = [
 
 var inputField = document.getElementById("input");
 var inputt = document.querySelector("#input");
-inputt.disabled = false;
+inputt.enabled;
 //addChatEntryBot();
 inputField.addEventListener("keypress", function(event) {
 let input = inputField.value;
-     if (event.key === "Enter" && inputField.value && !input.disabled) {
+     if (event.key === "Enter" && inputField.value && input.enabled) {
     inputField.value = "";
     output(input);
  stateHandle();
@@ -57,9 +57,9 @@ let input = inputField.value;
 });
 
 function stateHandle() {   
-        inputt.disabled = true;
+        inputt.disabled;
      setTimeout(() => {
-        inputt.disabled = false;
+        inputt.enabled;
       }, 10000);
 }
 
