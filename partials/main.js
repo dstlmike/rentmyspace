@@ -12,7 +12,7 @@ var utterances = [
   ["how old are you"],
   ["who are you", "are you human", "are you a robot", "are you bot", "are you human or bot", "are you a robot"],   
   ["how do you top up my bot", "how to top up marketbot", "top-up", "topup", "top up"],
-  ["contact us", "contact-us", "representative", "speak to a representative", "live agent", "agent", "speak to an agent", "speak to a agent", "speak to a live agent"]
+  ["contact us", "contact-us", "representative", "speak to a representative", "live agent", "agent", "speak to an agent", "speak to a agent", "speak to a live agent"],
   ["register", "sign up", "sign-up", "how can I register", "how to sign up", "how to register", "how do I register", "how do I sign up"],
   ["latest news", "update", "team meeting", "meeting", "meeting minutes", "next meeting", "when is the meeting", "when is the next meeting"],
   ["help"],
