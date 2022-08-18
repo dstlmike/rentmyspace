@@ -19,7 +19,7 @@ var utterances = [
 ];
 
 var answers = [
-   ["Fine... Thanks for asking.", "Pretty well, how can I help you?", "Fantastic, how can I assist?"],
+  ["Fine... Thanks for asking.", "Pretty well, how can I help you?", "Fantastic, how can I assist?"],
   ["Hello!", "Hi!", "Hey!", "Hi there!", "Greetings!"],
   ["Nothing much.", "Improving customer experience, how can I be of help?", "I don't know actually."],
   ["I am infinite."],
