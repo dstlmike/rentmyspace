@@ -7,40 +7,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
 var utterances = [
   ["how are you", "how is life", "how are things"],
-  ["hi", "hey", "hello", "good morning", "good afternoon", "hi there"],
-  ["what are you doing", "what is going on", "what is up"],
+  ["hi", "hey", "hello", "good morning", "good afternoon", "good evening", "hi there"],
+  ["what are you doing", "what is new", "what is going on", "what is up"],
   ["how old are you"],
-  ["who are you", "are you human", "are you bot", "are you human or bot", "are you a robot"],   
+  ["who are you", "are you human", "are you a robot", "are you bot", "are you human or bot", "are you a robot"],   
   ["how do you top up my bot", "how to top up marketbot", "top-up", "topup", "top up"],
-["register"],
+  ["contact us", "contact-us", "representative", "speak to a representative", "live agent", "agent", "speak to an agent", "speak to a agent", "speak to a live agent"]
+  ["register", "sign up", "sign-up", "how can I register", "how to sign up", "how to register", "how do I register", "how do I sign up"],
+  ["latest news", "update", "team meeting", "meeting", "meeting minutes", "next meeting", "when is the meeting", "when is the next meeting"],
   ["help"],
 ];
 
 var answers = [
-   [
-    "Fine... Thanks for asking.",
-    "Pretty well, how can I help you?",
-    "Fantastic, how can I assist?"
-  ],
-  [
-   "Hello!", "Hi!", "Hey!", "Hi there!", "Howdy!"
-  ],
-  [
-    "Nothing much.",
-    "About to go to sleep.",
-    "Can you guess?",
-    "I don't know actually."
-  ],
+   ["Fine... Thanks for asking.", "Pretty well, how can I help you?", "Fantastic, how can I assist?"],
+  ["Hello!", "Hi!", "Hey!", "Hi there!", "Greetings!"],
+  ["Nothing much.", "Improving customer experience, how can I be of help?", "I don't know actually."],
   ["I am infinite."],
   ["I am just a bot.", "I am a bot. What are you?"],
-  ["Visit our /home page and check out the Fund MarketBot dropdown menu."],
+  ["Visit our /home page and check out the Fund MarketBot dropdown menu.", "You can top up you're Advertising budget through any "],
+  ["Ok, 'Live Agent'. Click on 'Contact Us'.", "I see you're looking to speak with a representative. Click 'Contact Us' and we'll be in touch", "A representative, sure. Click on 'Contact Us' and send us a message."],
   ["Click GET USD50 ADS BUDGET to register"],
-["Have you checked your earnings today? Sign in to see how MarketBot is working for you.", "Try saying 'top up'.", "Say something like 'withdrawal'.", "You can try saying things like 'register'.", "Have questions, send us an e-mail at info@marketbotai.com.", "Want to learn more? click sign in/sign up for more info.", "Need help? Our support team is here to assist, e-mail us at info@marketbotai.com."],
+  ["Looking for the latest news, click on 'Contact Us' and request a copy of the meeting minutes.", "Meeting with Eugene has been postponed to Aug. 23, 2022.", "Meeting minutes on the latest news is available, Click 'Contact Us'.", "Read the latest news and updates on AI Marketing, Contact us for more details."],
+  ["Have you checked your earnings today? Sign in to see how MarketBot is working for you.", "Try saying 'top up'.", "Say something like 'contact us'.", "You can try saying things like 'register'.", "Have questions, click on 'contact us'.", "Want to learn more? click sign in/sign up for more info.", "Need help? Our support team is here to assist, click on 'contact us' and we'll be in touch."],
 ];
 
 var alternatives = [
-"Have you checked your earnings today? Sign in to see how MarketBot is working for you.", "Try saying 'top up'", "You can say things like 'register'", "Have questions, send us an e-mail at info@marketbotai.com", "Want to learn more? click sign in/sign up for more info", "Need help? Our support team is here to assist, e-mail us at info@marketbotai.com"
+  "Have you checked your earnings today? Sign in to see how MarketBot is working for you.", "Try saying 'top up'", "You can say things like 'register'", "Have questions, click on 'contact us' and we'll be in touch.", "Want to learn more? click sign in/sign up for more info", "Need help? Our support team is here to assist, click on 'contact us'.", "I didn't quit get that, try saying 'Latest News'."
 ];
+
 
 var inputField = document.getElementById("input");
 var inputt = document.querySelector("#input");
