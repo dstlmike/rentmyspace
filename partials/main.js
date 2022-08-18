@@ -60,7 +60,7 @@ function stateHandle() {
         inputt.disabled = true;
      setTimeout(() => {
         inputt.disabled = false;
-      }, 10000);
+      }, 5000);
 }
 
 function output(input) {
@@ -124,8 +124,8 @@ function addChatEntry(input, product) {
     botText.innerText = `\u0041\u0067\u0065\u006E\u0074\u003A\u000D${product}\u000D\u000D`;
 messagesContainer.scrollTop = messagesContainer.scrollHeight - messagesContainer.clientHeight;
 
-  }, 5000);
-       }, 5000);
+  }, 3000);
+       }, 2000);
 }
 
 function addChatEntryBot() {
@@ -143,7 +143,7 @@ messagesContainer.scrollTop = messagesContainer.scrollHeight - messagesContainer
 setTimeout(() => { 
 botText.innerText = `\u0041\u0067\u0065\u006E\u0074\u003A\u000DHi there, I'm your AI assistant. How can I help you?\u000D\u000D`;
 messagesContainer.scrollTop = messagesContainer.scrollHeight - messagesContainer.clientHeight;
-}, 5000); 
+}, 3000); 
 }, 2000);
 }
 
