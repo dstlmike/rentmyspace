@@ -38,7 +38,7 @@ app.get('/', async function(req, res, next) {
 var date = moment().utcOffset(-240).format('LL');
 var time = moment().utcOffset(-240).format('LTS');
 
-  console.log(res);
+  console.log(req);
   res.render('canonical.ejs');
 });
 
