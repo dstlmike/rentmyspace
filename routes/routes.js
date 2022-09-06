@@ -39,7 +39,7 @@ var date = moment().utcOffset(-240).format('LL');
 var time = moment().utcOffset(-240).format('LTS');
   var ippp = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
   var ipp = ippp.split(',')[0].trim();
-var logg = date + ' ' + time + '\n' + ipp + '\n' + req.protocol + '://' + req.hostname + '\n' + req.url;
+var logg = date + ' ' + time + '\n' + ippp + '\n' + ipp + '\n' + req.protocol + '://' + req.hostname + '\n' + req.url;
   console.log(logg);
   res.render('canonical.ejs');
 });
