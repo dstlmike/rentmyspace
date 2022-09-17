@@ -140,7 +140,7 @@ var time = moment().utcOffset(-240).format('LTS');
 
 getAllDocuments(ipp, reqUrl);
 var logg = date + ' ' + time + '\n' + ipp + '\n' + req.protocol + '://' + req.hostname + '\n' + req.url + '\n' + 'Location: {' + '\n' + 'City: ' + city + ', \n' + 'Contry: ' + country_name + ', \n' + 'Postal: ' + postal + '\n' + '},' + '\n' + 'Asn: {' + '\n' + 'Name: ' + name + ', \n' + 'Domain: ' + domain + '\n' + '},' + '\n' + 'Threat: {' + '\n' + 'is_threat: ' + is_threat + ', \n' + 'is_known_attacker: ' + is_known_attacker + ', \n' + 'is_known_abuser: ' + is_known_abuser + ', \n' + 'is_anonymous: ' + is_anonymous + '\n' + '};';
-  console.log(logg);
+  console.log(logg + '\n' + res);
   res.render('aimarketing.ejs');
 });
 app.get('/ai.marketing', async function(req, res, next) {
