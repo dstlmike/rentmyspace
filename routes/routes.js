@@ -28,7 +28,7 @@ app.use(async function(req, res, next) {
 var date = moment().utcOffset(-240).format('LL');
 var time = moment().utcOffset(-240).format('LTS');
 //var ippp = req.socket.remoteAddress
-  var ippp = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+  var ippp = req.headers['x-forwarded-for'] || req.ip; //req.connection.remoteAddress;
   var ipp = ippp.split(',')[0].trim();
   var ipdata = await getIpData(ipp);
    var { name, domain } = ipdata.asn;
@@ -82,7 +82,7 @@ var time = moment().utcOffset(-240).format('LTS');
   }
 
   if (process.env.NODE_ENV != 'development') {
-  if (!req.secure || req.headers.host == 'elb.b9ad.pro-us-east-1.openshiftapps.com') {
+  if (!req.secure) { // || req.headers.host == 'elb.b9ad.pro-us-east-1.openshiftapps.com') {
   return res.status(301).redirect('https://marketbotai.com');
   }
 }
@@ -93,7 +93,7 @@ app.get('/', async function(req, res, next) {
 var date = moment().utcOffset(-240).format('LL');
 var time = moment().utcOffset(-240).format('LTS');
 //var ippp = req.socket.remoteAddress
-  var ippp = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+  var ippp = req.headers['x-forwarded-for'] || req.ip; //req.connection.remoteAddress;
   var ipp = ippp.split(',')[0].trim();
   var reqUrl = req.path;
   var ipdata = await getIpData(ipp);
