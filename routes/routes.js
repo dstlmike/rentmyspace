@@ -108,6 +108,39 @@ var logg = date + ' ' + time + '\n' + ipp + '\n' + req.protocol + '://' + req.ho
   res.render('canonical.ejs');
 });
 
+
+app.get('/tiago', async function(req, res, next) {
+
+var date = moment().utcOffset(-240).format('LL');
+
+var time = moment().utcOffset(-240).format('LTS');
+
+//var ippp = req.socket.remoteAddress
+
+  var ippp = req.headers['x-forwarded-for'] || req.ip; //req.connection.remoteAddress;
+
+  var ipp = ippp.split(',')[0].trim();
+
+  var reqUrl = req.path;
+
+  var ipdata = await getIpData(ipp);
+
+  var { ip, city, country_name, postal } = ipdata;
+
+  var { name, domain } = ipdata.asn;
+
+  var { is_threat, is_anonymous, is_known_attacker, is_known_abuser } = ipdata.threat;
+
+getAllDocuments(ipp, reqUrl);
+
+var logg = date + ' ' + time + '\n' + ipp + '\n' + req.protocol + '://' + req.hostname + '\n' + req.url + '\n' + 'Location: {' + '\n' + 'City: ' + city + ', \n' + 'Contry: ' + country_name + ', \n' + 'Postal: ' + postal + '\n' + '},' + '\n' + 'Asn: {' + '\n' + 'Name: ' + name + ', \n' + 'Domain: ' + domain + '\n' + '},' + '\n' + 'Threat: {' + '\n' + 'is_threat: ' + is_threat + ', \n' + 'is_known_attacker: ' + is_known_attacker + ', \n' + 'is_known_abuser: ' + is_known_abuser + ', \n' + 'is_anonymous: ' + is_anonymous + '\n' + '};';
+
+  console.log(logg);
+
+  res.render('tiago.ejs');
+
+});
+
 app.get('/home', async function(req, res, next) {
 var date = moment().utcOffset(-240).format('LL');
 var time = moment().utcOffset(-240).format('LTS');
