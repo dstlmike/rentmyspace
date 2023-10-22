@@ -54,7 +54,7 @@ function stateHandle() {
         inputt.disabled = true;
      setTimeout(() => {
         inputt.disabled = false;
-      }, 5000);
+      }, 3000);
 }
 
 function output(input) {
