@@ -39,14 +39,14 @@ var alternatives = [
 var inputField = document.getElementById("input");
 var inputt = document.querySelector("#input");
 inputt.disabled = false;
-//addChatEntryBot();
+addChatEntryBot();
 inputField.addEventListener("keypress", function(event) {
 let input = inputField.value;
      if (event.key === "Enter" && inputField.value) {
     inputField.value = "";
     output(input);
  stateHandle();
-//    event.preventDefault(); 
+    event.preventDefault(); 
 }
 });
 
